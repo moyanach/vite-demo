@@ -1,0 +1,59 @@
+.testparent {
+  border: 1px solid transparent;
+}
+
+.test {
+  margin: 0;
+  padding: auto;
+  width: 0;
+  // height: 0;
+  border:20px solid transparent;
+  border-bottom:20px solid pink;
+}
+
+.left, .right {
+  position: relative;
+  margin: 0;
+  padding: 6px;
+  display: table;
+  min-height: 20px;
+  background-color: greenyellow;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  float: right;
+}
+
+.left::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  display: inline-block;
+  border: 8px solid transparent;
+  border-right: 8px solid greenyellow;
+  left: -15px;
+  top: 20px;
+}
+
+.right::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  display: inline-block;
+  border: 8px solid transparent;
+  border-left: 8px solid greenyellow;
+  right: -15px;
+  top: 20px;
+}
+
+.clear {
+  clear: both;
+}
